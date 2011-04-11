@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<center>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="errormsg">This file does not exist!</span>
+<p>
+{{ errormsg }}
+<p>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">We're feeling empty. Share a Starcraft II replay!</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+Arquivo:
+<input type="file" name="file">
+<input type="submit">
+</form>
+<div id="spacer" style="height: 10px"></div>
+<p>You may share Starcraft II replay files. Please notice that other types
+of data such as videos and images are not accepted. Sorry.
+<p>
+{{ debugmsg }}
+<p>
+</div>
+</form>
+</body>
+</html>

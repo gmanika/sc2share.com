@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<center>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="sendmsg">Starcraft replay shared successfully!</span>
+<p>
+Copy and paste the URL below to share:
+<p>
+<span id="shorturl"><a href="http://{{ baseurl }}/{{ replayid }}">http://{{ baseurl }}/{{ replayid }}</a></span>
+<div id="spacer" style="height: 20px"></div>
+<p>
+<span id="subtext"> You may also append a .SC2Replay extension if you think that makes the URL easier to understand:<p id="subtext"> http://{{ baseurl }}/{{ replayid }}.SC2Replay</span>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Share another Starcraft II replay?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+File:
+<input type="file" name="file">
+<input type="submit">
+</form>
+
+</div>
+<div id="spacer" style="height: 20px"></div><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sc2share.com/" data-text="SC2Share.com hosts Starcraft 2 replay files under tiny URLs, no login required" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+</form>
+</body>
+</html>

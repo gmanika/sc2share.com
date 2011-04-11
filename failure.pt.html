@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="errormsg">Envio de arquivo falhou!</span>
+<p>
+O envio do seu arquivo <b>{{ filename }}</b> falhou. {{errormsg}}
+<p>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Quer tentar de novo?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+Arquivo:
+<input type="file" name="file">
+<input type="submit">
+</form>
+<div id="spacer" style="height: 10px"></div>
+<p>Você pode enviar arquivos relativos ao Starcraft. Note que não é possível compartilhar
+imagens e vídeos diretamente, apenas os arquivos de replay gerados pelo jogo.
+
+</div>
+</form>
+</body>
+</html>

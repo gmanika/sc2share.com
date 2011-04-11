@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="sendmsg">Replay compartilhado com sucesso!</span>
+<p>
+Copie e cole a URL abaixo para compartilhar:
+<p>
+<span id="shorturl"><a href="http://{{ baseurl }}/{{ replayid }}">http://{{ baseurl }}/{{ replayid }}</a></span>
+<p>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Quer compartilhar um novo arquivo?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+Arquivo:
+<input type="file" name="file">
+<input type="submit">
+</form>
+
+</div>
+</form>
+</body>
+</html>

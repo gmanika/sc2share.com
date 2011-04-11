@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays at sc2share.com</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="sendmsg">Compartilhe um arquivo de replay</span>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+Arquivo:
+<input type="file" name="file">
+<input type="submit">
+</form>
+<div id="spacer" style="height: 70px"></div>
+<div id="explanation">
+Nós hospedamos seus arquivos de replay do Starcraft II em uma URL curta para linkar em fóruns, e-mails ou
+Twitter. É como o bit.ly ou o Twitpic, mas para replays de Starcraft II.
+</div>
+
+</div>
+</form>
+</body>
+</html>

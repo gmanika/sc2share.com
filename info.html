@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<center>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="sendmsg">Information for resource {{ resource }}</span>
+<p>
+<table>
+<tr>
+<td>Number of results:</td><td>{{ num_results }}</td>
+</tr>
+<tr>
+<td>Original filename:</td><td>{{ original_filename }}</td>
+</tr>
+<tr>
+<td>File size:</td><td>{{ filesize }}</td>
+</tr>
+<tr>
+<td>Download count:</td><td>{{ dl_count }}</td>
+</tr>
+<tr>
+<td>Next id:</td><td>{{ counter }}</td>
+</tr>
+<table>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Upload?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+File:
+<input type="file" name="file">
+<input type="submit">
+</form>
+
+</div>
+</form>
+</body>
+</html>

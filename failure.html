@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+<center>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="errormsg">Invalid file upload!</span>
+<p>
+Unfortunately, we're unable to accept your file <b>{{ filename }}</b>. sc2share.com only accepts Starcraft II replay files.
+<p>
+Error: {{ errormsg }}
+<p>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Try again?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+File:
+<input type="file" name="file">
+<input type="submit">
+</form>
+<div id="spacer" style="height: 10px"></div>
+<p>Please notice that you can only share Starcraft II replay files (typically
+ending in a .SC2Replay extension). You cannot share videos, images and other
+types of data.
+
+</div>
+<div id="spacer" style="height: 20px"></div><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sc2share.com/" data-text="SC2Share.com hosts Starcraft 2 replay files under tiny URLs, no login required" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+</form>
+</body>
+</html>
