@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Share Starcraft 2 replays</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<style type="text/css">
+.download {
+  -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+  box-shadow:inset 0px 1px 0px 0px #caefab;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+  background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+  background-color:#77d42a;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #268a16;
+  display:inline-block;
+  color:#306108;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #aade7c;
+  color: rgb(48, 97, 8) !important;
+}.download:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+  background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+  background-color:#5cb811;
+}.download:active {
+  position:relative;
+  top:1px;
+}
+</style>
+</head>
+<body>
+<center>
+<div id="content">
+<div id="spacer"></div>
+<p>
+<span id="sendmsg">Download SC2 Replay</span>
+<p>
+You are about to download "{{download_filename}}".
+<p>
+<span id="shorturl"><a class="download" href="http://{{ baseurl }}/{{ download_url }}">Download</a></span>
+<div id="spacer" style="height: 20px"></div>
+<p>
+<span id="subtext"></span>
+<div id="spacer" style="height: 50px"></div>
+<span id="sendmsg">Share another Starcraft II replay?</span>
+<p>
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+File:
+<input type="file" name="file">
+<input type="submit">
+</form>
+
+</div>
+<div id="spacer" style="height: 20px"></div><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sc2share.com/" data-text="SC2Share.com hosts Starcraft 2 replay files under tiny URLs, no login required" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+</form>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40474675-1', 'sc2share.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

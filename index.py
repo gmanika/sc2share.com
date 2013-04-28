@@ -186,7 +186,22 @@ class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):
 			result = results[0]
 			blob_info = blobstore.BlobInfo.get(result.blobinfo)
 			if blob_info:
-				self.redirect('/d/%s/%s' % (resource, quote(blob_info.filename.encode("utf-8"))))
+				upload_url = blobstore.create_upload_url('/upload')
+				path = os.path.join(os.path.dirname(__file__), 'download.html')
+				self.response.headers['Cache-Control'] = 'no-cache'
+				self.response.headers['Pragma'] = 'no-cache'
+
+				baseurl = urlparse(self.request.url).netloc;
+
+				if "sc2share.com" in baseurl:
+					baseurl = "sc2share.com"
+
+				template_values = {
+					'download_filename': blob_info.filename.encode("utf-8"),
+					'download_url': 'd/%s/%s' % (resource, quote(blob_info.filename.encode("utf-8"))),
+					'baseurl': baseurl,
+				}
+				self.response.out.write(template.render(path, template_values))
 				return
 			else:
 				reason = 'nosuchfile'
