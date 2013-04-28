@@ -9,3 +9,4 @@ table.td { width: 150px; margin-left: auto; margin-right: auto; }
 #shorturl a { color: #D99559; font-size: 30px; }
 #subtext { color: #a9a9a9 }
 a { color: #8A9654 }
+.filename { color: rgb(82, 142, 177); font-family: "fixed"; }
