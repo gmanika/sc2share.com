@@ -123,7 +123,7 @@ class SuccessHandler(webapp.RequestHandler):
 
 		# Remover www
 		if "sc2share.com" in baseurl:
-			baseurl = "sc2shr.com"
+			baseurl = "sc2share.com"
 
 		template_values = {
 			'upload_url': upload_url,
